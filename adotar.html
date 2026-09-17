@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adotar | OPO Adota</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">OPO <span>Adota</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="adotar.html" class="ativo">Adotar</a></li>
+          <li><a href="perdidos.html">Animais Perdidos</a></li>
+          <li><a href="ajudar.html">Como Ajudar</a></li>
+          <li><a href="ajudar.html#doar" class="btn-ajudar">Doar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <h2>Animais Disponíveis para Adoção</h2>
+      </div>
+
+      <!-- Filtro por espécie, feito só com HTML/CSS (radio + :checked) -->
+      <input type="radio" name="filtro" id="filtro-todos" checked>
+      <input type="radio" name="filtro" id="filtro-caes">
+      <input type="radio" name="filtro" id="filtro-gatos">
+      <input type="radio" name="filtro" id="filtro-outros">
+
+      <div class="filtros">
+        <label for="filtro-todos">Todos</label>
+        <label for="filtro-caes">Cães</label>
+        <label for="filtro-gatos">Gatos</label>
+        <label for="filtro-outros">Outros</label>
+      </div>
+
+      <div class="animais-grid">
+        <div class="card cao">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Cão</span>
+            <h3>Bolota</h3>
+            <p class="meta">2 anos · Porto</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+
+        <div class="card gato">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Gato</span>
+            <h3>Mimi</h3>
+            <p class="meta">8 meses · Gaia</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+
+        <div class="card cao">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Cão</span>
+            <h3>Rex</h3>
+            <p class="meta">5 anos · Matosinhos</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+
+        <div class="card gato">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Gato</span>
+            <h3>Simba</h3>
+            <p class="meta">3 anos · Vila do Conde</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+
+        <div class="card outro">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Coelho</span>
+            <h3>Nino</h3>
+            <p class="meta">1 ano · Braga</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+
+        <div class="card cao">
+          <div class="foto">Foto do animal</div>
+          <div class="info">
+            <span class="tag">Cão</span>
+            <h3>Filipa</h3>
+            <p class="meta">4 anos · Vila Nova de Gaia</p>
+            <a href="animal.html" class="btn-card">Ver mais →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 <strong>OPO Adota</strong> — Projeto académico ISPGAYA | CTeSP TPSI
+  </footer>
+
+</body>
+</html>

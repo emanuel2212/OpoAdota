@@ -1,0 +1,516 @@
+/* =========================================================
+   ADOTAPT — style.css
+   Tema visual: profissional, acolhedor (verde + laranja)
+   ========================================================= */
+
+:root {
+  --verde: #1f7a53;
+  --verde-escuro: #12543a;
+  --verde-claro: #e6f4ec;
+  --laranja: #f2994a;
+  --laranja-escuro: #d97b2b;
+  --branco: #ffffff;
+  --cinza-claro: #f7f8fa;
+  --cinza-medio: #dfe3e8;
+  --cinza-texto: #33383d;
+  --vermelho-alerta: #d64545;
+
+  --fonte-titulo: "Poppins", "Nunito", sans-serif;
+  --fonte-texto: "Nunito", "Poppins", sans-serif;
+
+  --raio: 14px;
+  --sombra: 0 6px 18px rgba(18, 84, 58, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cinza-texto);
+  background-color: var(--cinza-claro);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  background-color: var(--branco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--verde-escuro);
+}
+
+.logo span {
+  color: var(--laranja);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+nav a {
+  font-weight: 600;
+  color: var(--cinza-texto);
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--verde);
+  border-color: var(--verde);
+}
+
+nav a.btn-ajudar {
+  background-color: var(--laranja);
+  color: var(--branco);
+  padding: 0.5rem 1.1rem;
+  border-radius: 30px;
+  border-bottom: none !important;
+}
+
+nav a.btn-ajudar:hover {
+  background-color: var(--laranja-escuro);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
+  color: var(--branco);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 0.8rem;
+  font-size: 1.15rem;
+  color: var(--verde-claro);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.hero-botoes {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-principal {
+  background-color: var(--laranja);
+  color: var(--branco);
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-principal:hover {
+  background-color: var(--laranja-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: var(--branco);
+  color: var(--verde-escuro);
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  transition: transform 0.15s ease;
+}
+
+.btn-secundario:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Faixa de estatísticas ---------- */
+.stats {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 1.8rem 1.5rem;
+  border-bottom: 1px solid var(--cinza-medio);
+}
+
+.stats .item {
+  text-align: center;
+}
+
+.stats .numero {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.stats .label {
+  font-size: 0.85rem;
+  color: var(--cinza-texto);
+}
+
+/* ---------- Secções gerais ---------- */
+main {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.section-head h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  color: var(--verde-escuro);
+}
+
+.section-head a {
+  font-weight: 700;
+  color: var(--laranja);
+}
+
+/* =========================================================
+   FILTROS (CSS puro, sem JavaScript) — via inputs radio ocultos
+   ========================================================= */
+.filtros {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.filtros input[type="radio"] {
+  display: none;
+}
+
+.filtros label {
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-medio);
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtros input[type="radio"]:checked + label {
+  background-color: var(--verde);
+  color: var(--branco);
+  border-color: var(--verde);
+}
+
+/* Mostra/esconde cards de adoção conforme filtro selecionado */
+.animais-grid .card {
+  display: block;
+}
+
+#filtro-todos:checked ~ .animais-grid .card,
+#filtro-caes:checked ~ .animais-grid .card.cao,
+#filtro-gatos:checked ~ .animais-grid .card.gato,
+#filtro-outros:checked ~ .animais-grid .card.outro {
+  display: block;
+}
+
+#filtro-caes:checked ~ .animais-grid .card.gato,
+#filtro-caes:checked ~ .animais-grid .card.outro,
+#filtro-gatos:checked ~ .animais-grid .card.cao,
+#filtro-gatos:checked ~ .animais-grid .card.outro,
+#filtro-outros:checked ~ .animais-grid .card.cao,
+#filtro-outros:checked ~ .animais-grid .card.gato {
+  display: none;
+}
+
+/* =========================================================
+   CARDS DE ANIMAIS (adoção e perdidos)
+   ========================================================= */
+.animais-grid,
+.perdidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.4rem;
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card .foto {
+  width: 100%;
+  height: 160px;
+  background-color: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--verde);
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+}
+
+.card .info {
+  padding: 1rem;
+}
+
+.card h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  color: var(--verde-escuro);
+  margin-bottom: 0.2rem;
+}
+
+.card .meta {
+  font-size: 0.85rem;
+  color: var(--cinza-texto);
+  margin-bottom: 0.6rem;
+}
+
+.card .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 30px;
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+.card .tag.urgente {
+  background-color: #fdecec;
+  color: var(--vermelho-alerta);
+}
+
+.card .btn-card {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-weight: 700;
+  color: var(--laranja);
+}
+
+/* ---------- Cards de "Perdidos" (aviso mais forte) ---------- */
+.perdidos-grid .card .foto {
+  background-color: #fdecec;
+  color: var(--vermelho-alerta);
+}
+
+/* =========================================================
+   SECÇÃO "COMO AJUDAR" — associações
+   ========================================================= */
+.associacoes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.associacao-card {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1.4rem;
+  border-left: 5px solid var(--laranja);
+}
+
+.associacao-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-escuro);
+  margin-bottom: 0.4rem;
+}
+
+.associacao-card .necessidades {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.associacao-card .necessidades span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+  padding: 0.25rem 0.7rem;
+  border-radius: 30px;
+}
+
+/* =========================================================
+   PÁGINA DE DETALHE DO ANIMAL
+   ========================================================= */
+.animal-detalhe {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+}
+
+.animal-detalhe .foto-grande {
+  width: 100%;
+  height: 320px;
+  border-radius: var(--raio);
+  background-color: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--verde);
+  font-family: var(--fonte-titulo);
+  box-shadow: var(--sombra);
+}
+
+.animal-detalhe h1 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-escuro);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.animal-detalhe .ficha {
+  list-style: none;
+  margin: 1.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.6rem 2rem;
+}
+
+.animal-detalhe .ficha li strong {
+  color: var(--verde-escuro);
+}
+
+/* ---------- Formulário de contacto/adoção (visual, sem back-end) ---------- */
+form.form-contacto {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1.6rem;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 480px;
+}
+
+form.form-contacto label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--verde-escuro);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form.form-contacto input,
+form.form-contacto textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--cinza-medio);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+form.form-contacto input:focus,
+form.form-contacto textarea:focus {
+  outline: 2px solid var(--verde);
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  background-color: var(--verde-escuro);
+  color: var(--verde-claro);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer strong {
+  color: var(--branco);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 850px) {
+  .animal-detalhe {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .stats {
+    gap: 1.5rem;
+  }
+}
