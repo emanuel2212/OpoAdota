@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --verde: #1f7a53;
+  --verde-escuro: #12543a;
+  --verde-claro: #e6f4ec;
+  --laranja: #f2994a;
+  --branco: #ffffff;
+  --fundo: #f7f8fa;
+  --texto: #33383d;
+
+  --fonte-titulo: "Poppins", "Nunito", sans-serif;
+  --fonte-texto: "Nunito", "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background-color: var(--fundo);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-escuro);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--branco);
+  border-bottom: 3px solid var(--laranja);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--verde-escuro);
+}
+
+.logo span {
+  color: var(--laranja);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--verde);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+section h2 {
+  margin-bottom: 0.8rem;
+}
+
+#destaque {
+  background-color: var(--verde-claro);
+  border-radius: 14px;
+  padding: 2.5rem;
+}
+
+footer {
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
