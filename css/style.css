@@ -5,10 +5,10 @@
 }
 
 :root {
-  --verde: #1f7a53;
-  --verde-escuro: #12543a;
-  --verde-claro: #e6f4ec;
-  --laranja: #f2994a;
+  --azul: #110ebd;
+  --azul-escuro: #1e1254;
+  --azul-claro: #e6f4ec;
+  --azull: #5b4af2;
   --branco: #ffffff;
   --fundo: #f7f8fa;
   --texto: #33383d;
@@ -26,7 +26,7 @@ body {
 
 h1, h2, h3 {
   font-family: var(--fonte-titulo);
-  color: var(--verde-escuro);
+  color: var(--azul-escuro);
   line-height: 1.2;
 }
 
@@ -37,7 +37,7 @@ a {
 
 header {
   background-color: var(--branco);
-  border-bottom: 3px solid var(--laranja);
+  border-bottom: 3px solid var(--azull);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -47,14 +47,14 @@ header {
 }
 
 .logo {
-  font-family: var(--fonte-titulo);
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--verde-escuro);
+  display: flex;
+  align-items: center;
 }
 
-.logo span {
-  color: var(--laranja);
+.logo img {
+  height: 76px;
+  width: auto;
+  display: block;
 }
 
 nav ul {
@@ -69,7 +69,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--verde);
+  color: var(--azul);
 }
 
 main {
@@ -92,15 +92,210 @@ section h2 {
 }
 
 #destaque {
-  background-color: var(--verde-claro);
+  background-color: var(--azul-claro);
   border-radius: 14px;
   padding: 2.5rem;
 }
 
 footer {
-  background-color: var(--verde-escuro);
+  background-color: var(--azul-escuro);
   color: var(--branco);
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
+}
+
+/* ---------- Navegação ---------- */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a.ativo {
+  color: var(--azul);
+  border-bottom: 2px solid var(--azul);
+}
+
+nav .btn-ajudar {
+  background-color: var(--azul);
+  color: var(--branco);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+}
+
+nav .btn-ajudar:hover {
+  background-color: var(--azull);
+  color: var(--branco);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: var(--azul-claro);
+  border-radius: 14px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-principal,
+.btn-secundario {
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid var(--azul);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-principal {
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+.btn-principal:hover {
+  background-color: var(--azull);
+  border-color: var(--azull);
+}
+
+.btn-secundario {
+  color: var(--azul);
+}
+
+.btn-secundario:hover {
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+
+/* ---------- Secções e cartões ---------- */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-head h2 {
+  margin-bottom: 0;
+}
+
+.section-head a {
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.animais-grid,
+.perdidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(30, 18, 84, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card .foto {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-claro);
+  color: var(--azul-escuro);
+  font-size: 0.9rem;
+}
+
+.card .info {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0.4rem 0 0.2rem;
+}
+
+.card .meta {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background-color: var(--azul-claro);
+  color: var(--azul);
+}
+
+.tag.urgente {
+  background-color: #fde8e8;
+  color: #c0392b;
+}
+
+.btn-card {
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.btn-card:hover {
+  color: var(--azull);
+}
+
+/* ---------- Rodapé ---------- */
+footer p {
+  margin-bottom: 0.4rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Telemóvel ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  header {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }
