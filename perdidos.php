@@ -13,7 +13,9 @@ include __DIR__ . '/includes/header.php';
 
       <div class="perdidos-grid">
         <div class="card">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido2.avif" alt="Nino, um coelho de 1 ano disponível para adoção em Braga">
+          </div>
           <div class="info">
             <span class="tag urgente">Perdido</span>
             <h3>Toto</h3>
@@ -23,7 +25,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido2.avif" alt="Nino, um coelho de 1 ano disponível para adoção em Braga">
+          </div>
           <div class="info">
             <span class="tag urgente">Perdido</span>
             <h3>Luna</h3>
@@ -33,7 +37,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido2.avif" alt="Nino, um coelho de 1 ano disponível para adoção em Braga">
+          </div>
           <div class="info">
             <span class="tag urgente">Perdido</span>
             <h3>Piu</h3>
