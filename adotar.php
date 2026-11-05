@@ -26,7 +26,9 @@ include __DIR__ . '/includes/header.php';
 
       <div class="animais-grid">
         <div class="card cao">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Cão</span>
             <h3>Bolota</h3>
@@ -36,7 +38,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card gato">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Gato</span>
             <h3>Mimi</h3>
@@ -46,7 +50,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card cao">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Cão</span>
             <h3>Rex</h3>
@@ -56,7 +62,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card gato">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Gato</span>
             <h3>Simba</h3>
@@ -66,7 +74,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card outro">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Coelho</span>
             <h3>Nino</h3>
@@ -76,7 +86,9 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div class="card cao">
-          <div class="foto">Foto do animal</div>
+          <div class="foto">
+            <img src="img/perdidos/perdido1.jpg" alt="Bolota, um cão de 2 anos disponível para adoção no Porto">
+          </div>
           <div class="info">
             <span class="tag">Cão</span>
             <h3>Filipa</h3>
