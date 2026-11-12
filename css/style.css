@@ -299,3 +299,55 @@ footer a:hover {
     font-size: 1.8rem;
   }
 }
+
+
+.form-contacto {
+    width: 100%;
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.form-contacto div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-contacto label {
+    font-size: 14px;
+    color: #1a3a33;
+    font-weight: 500;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #d5e2dc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-contacto textarea {
+    min-height: 65px;
+}
+
+.btn-principal {
+    width: fit-content;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #1715c9;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .form-contacto {
+        grid-template-columns: 1fr;
+    }
+}
